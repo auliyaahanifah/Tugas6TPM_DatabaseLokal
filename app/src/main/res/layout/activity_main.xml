@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+
+    >
+
+    <TextView
+        android:id="@+id/tv_main_tanggal"
+        android:layout_width="120dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="bottom"
+        android:text="Tanggal"
+        android:fontFamily="@font/chicle"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/tv_main_masukkotor"
+        android:layout_width="120dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/tv_main_tanggal"
+        android:layout_marginBottom="4dp"
+        android:gravity="bottom"
+        android:text="Bruto"
+        android:fontFamily="@font/chicle"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/tv_main_pengeluaran"
+        android:layout_width="120dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/tv_main_masukkotor"
+        android:layout_marginBottom="4dp"
+        android:gravity="bottom"
+        android:text="Pengeluaran"
+        android:fontFamily="@font/chicle"
+        android:textSize="28sp" />
+
+
+    <EditText
+        android:id="@+id/et_tanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_main_tanggal"
+        android:textSize="21sp"
+        android:inputType="text"
+        android:fontFamily="@font/chewy"/>
+
+
+
+    <EditText
+        android:id="@+id/et_masukkotor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_main_tanggal"
+        android:layout_toRightOf="@id/tv_main_masukkotor"
+        android:textSize="21sp"
+        android:inputType="number"
+        android:fontFamily="@font/chewy"/>
+
+    <EditText
+        android:id="@+id/et_pengeluaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_main_masukkotor"
+        android:layout_toRightOf="@id/tv_main_masukkotor"
+        android:textSize="21sp"
+        android:inputType="number"
+        android:fontFamily="@font/chewy"/>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:layout_alignParentBottom="true"
+        android:text="Submit"
+        android:fontFamily="@font/chicle"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_main"
+        android:layout_margin="4dp"
+        android:background="@color/teal_700"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_submit"
+        android:layout_below="@id/tv_main_pengeluaran">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
